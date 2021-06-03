@@ -1,0 +1,627 @@
+
+   
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap');
+
+        * {
+            /* background-color: cyan; */
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            outline: none;
+        }
+
+        .headerWrap {
+            padding: 40px 50px;
+        }
+
+        .brand-logo img {
+            max-width: 100%;
+            width: 130px;
+        }
+
+        .emailSubject h2 {
+            font-size: 14px;
+            line-height: 19px;
+            color: #42526E;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .ImageWrap {
+            padding: 20px 50px 0;
+        }
+
+        .ImageWrap img {
+            border-radius: 4px;
+        }
+
+        .HeadingWrap,
+        .ContentWrap {
+            padding: 50px 80px 30px;
+        }
+
+        .HeadingWrap h1 {
+            font-weight: 900;
+            font-size: 44px;
+            line-height: 50px;
+            color: #000000;
+            margin: 0;
+        }
+
+        .headingStripes {
+            padding: 0 90px 30px;
+        }
+
+        .ContentWrap p {
+            font-size: 18px;
+            color: #000000;
+            margin-bottom: 30px;
+            line-height: 28px;
+            font-weight: 400;
+        }
+
+        .ContentWrap p b {
+            font-size: 18px;
+            color: #000000;
+            display: inline-block;
+            line-height: 28px;
+            font-weight: 700;
+        }
+
+        .ContentWrap p a {
+            display: inline-block;
+            outline: none;
+            text-decoration: none;
+            color: #2F39BF;
+            font-size: 18px;
+            font-weight: 400;
+            transition: all .3s ease-in-out;
+        }
+
+        .ContentWrap p a:hover {
+            color: #8188ea !important;
+        }
+
+        .ctaWrap {
+            padding: 0;
+        }
+
+        .ctaWrap .cta {
+            padding: 0;
+            visibility: hidden;
+            height: 0;
+            opacity: 0;
+            background: #39DCB1;
+            border: 2px solid #39DCB1;
+            box-sizing: border-box;
+            border-radius: 6px;
+            transition: all .3s ease-in-out;
+            font-size: 18px;
+            line-height: 30px;
+            color: #0E134F;
+            font-weight: 600;
+            width: 300px;
+            outline: none;
+            text-decoration: none;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+            white-space: nowrap;
+        }
+
+        .ctaWrap .cta:hover {
+            background-color: #2ccba1 !important;
+            border-color: #2ccba1 !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .footerWrap {
+            background: #0E134F;
+        }
+
+        .footerInner {
+            padding: 40px 50px 30px;
+        }
+
+        .footerCwDesc img {
+            max-height: 24px;
+        }
+
+        .footerCwDesc p {
+            font-size: 14px;
+            line-height: 20px;
+            color: #FFFFFF;
+            font-weight: 400;
+            margin: 20px 0 0;
+        }
+
+        .footerSocialLinks {
+            display: block;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: right;
+        }
+
+        .footerSocialLinks li {
+            display: inline-block;
+            margin: 0 5px;
+            vertical-align: middle;
+        }
+
+        .footerSocialLinks li a {
+            display: inline-block;
+        }
+
+        .footerSocialLinks li img {
+            max-height: 18px;
+        }
+
+        .footerCopyRight {
+            padding: 30px 0 10px;
+            text-align: right;
+        }
+
+        .footerCopyRight p {
+            font-size: 12px;
+            line-height: 12px;
+            color: #FFFFFF;
+            font-weight: 400;
+            margin: 0;
+            text-align: center;
+        }
+
+        .unSubWrap,
+        .communityLinks {
+            padding: 40px 0 10px;
+        }
+
+        .unSubWrap p {
+            font-size: 12px;
+            line-height: 18px;
+            color: #FFFFFF;
+            font-weight: 400;
+            padding-right: 40px;
+            margin: 0;
+        }
+
+        .unSubWrap p a {
+            font-size: 12px;
+            line-height: 18px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .communityLinks ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            margin-left: -30px;
+            text-align: right;
+        }
+
+        .communityLinks ul li {
+            display: inline-block;
+            padding: 0 8px 0 3px;
+            border-right: 1px solid rgba(255, 255, 255, 0.4);
+            margin: 0;
+        }
+
+        .communityLinks ul li:first-child {
+            padding-left: 0;
+        }
+
+        .communityLinks ul li:last-child {
+            border: 0;
+            padding-right: 0;
+        }
+
+        .communityLinks ul li a {
+            display: inline-block;
+            font-size: 11px;
+            line-height: 30px;
+            color: #FFFFFF;
+            opacity: 0.7;
+        }
+
+        .communityLinks ul li a:hover {
+            opacity: 1 !important;
+        }
+
+
+        .PostsWrap {
+            padding: 0 50px;
+        }
+
+        .PostsBox {
+            padding: 50px 0;
+            border-bottom: 1px solid rgba(66, 82, 110, 0.2);
+        }
+
+        .PostsBox.noBorder {
+            border: 0 !important;
+        }
+
+        .PostsBox img {
+            border-radius: 4px;
+        }
+
+        .postCatg {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 24px;
+            color: #EF7947;
+            display: inline-block;
+        }
+
+        .PostsBoxContent h3 {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 30px;
+            color: #000000;
+            margin: 10px 0 15px;
+        }
+
+        .PostsBoxContent p {
+            font-size: 14px;
+            font-weight: 400;
+            margin: 0 0 10px;
+            line-height: 24px;
+            color: #42526E;
+        }
+
+        .PostsBoxContent .postLink {
+            font-size: 12px;
+            line-height: 16px;
+            text-decoration-line: underline;
+            color: #2F39BF;
+            font-weight: 600;
+        }
+
+        .PostsBoxContent .postLink:hover {
+            color: #626be6 !important;
+        }
+
+        .MostPopularHading {
+            padding: 30px 0 20px;
+            border-bottom: 1px solid rgba(66, 82, 110, 0.2);
+        }
+
+        .MostPopularHading h2 {
+            font-size: 24px;
+            line-height: 33px;
+            color: #000000;
+            margin: 0;
+        }
+
+        .MostPopularPostWrap {
+            padding: 30px 0 50px;
+        }
+
+        .MostPopularPost a {
+            font-size: 16px;
+            line-height: 24px;
+            text-decoration-line: underline;
+            color: #000000;
+            font-weight: 400;
+            margin: 5px 0 0;
+        }
+
+        .MostPopularPostLeft {
+            padding-right: 40px;
+            border-right: 1px solid rgba(66, 82, 110, 0.2);
+        }
+
+        .MostPopularPostRight {
+            padding-left: 40px;
+        }
+
+        @media(max-width:500px) {
+
+            .headerWrap,
+            .ImageWrap {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+
+            .HeadingWrap h1 {
+                font-size: 32px !important;
+                line-height: 40px !important;
+            }
+
+            .HeadingWrap,
+            .ContentWrap {
+                padding: 30px 30px 20px !important;
+            }
+
+            .headingStripes {
+                padding: 0 40px !important;
+            }
+
+            .ctaWrap {
+                padding: 0px 100px 0px !important;
+            }
+
+            .ContentWrap p b,
+            .ContentWrap p,
+            .ContentWrap p a {
+                font-size: 16px !important;
+            }
+
+            .communityLinks ul {
+                margin: 0 0 0 50px !important;
+                text-align: left !important;
+            }
+
+            .communityLinks ul li {
+                display: block !important;
+                border: 0 !important;
+                border-left: 2px solid rgba(255, 255, 255, 0.4) !important;
+                padding: 0 0 0 6px !important;
+                margin: 0 0 10px !important;
+                line-height: 15px !important;
+            }
+
+            .communityLinks ul li a {
+                line-height: 15px !important;
+            }
+
+            .communityLinks ul li:last-child,
+            .communityLinks ul li:first-child {
+                border-left: 2px solid rgba(255, 255, 255, 0.4) !important;
+                padding: 0 0 0 6px !important;
+            }
+
+            .PostsWrap {
+                padding: 0 20px !important;
+            }
+
+            .PostsBoxContent {
+                padding-left: 15px !important;
+            }
+
+            .PostRight {
+                padding-right: 15px !important;
+                padding-left: 0 !important;
+            }
+
+            .PostsBoxContent h3 {
+                font-size: 18px !important;
+                line-height: 24px !important;
+            }
+
+            .MostPopularPostRight {
+                padding-left: 20px !important;
+            }
+
+            .MostPopularPostLeft {
+                padding-right: 20px !important;
+            }
+        }
+    </style>
+
+    <table border="0" cellpadding="0" cellspacing="0" align="center"
+        style="max-width:700px; min-width:300px; background-color: #fff; border: 1px solid #ddd;">
+        <!-- Header Start -->
+        <tr>
+            <td>
+                <table class="headerWrap" width='100%' border="0" cellpadding="0" cellspacing="0" align="center">
+                    <tr>
+                        <td class="brand-logo" align="left" width='50%'>
+                            <a href="http://cloudways.com/" target="_blank">
+                                <img src="https://cloudways-static-content.s3.amazonaws.com/Images/Others/Assets/cw_brandlogo_dark.png"
+                                     alt="">
+                            </a>
+                        </td>
+                        <td class="emailSubject" align="right" width='50%'>
+                            <h2>Feature Announcement</h2>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- Header End -->
+
+        <!-- Image Wrap Start -->
+        <tr>
+            <td>
+                <table class="ImageWrap" width='100%' border="0" cellpadding="0" cellspacing="0" align="center">
+                    <tr>
+                        <td width='100%'>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- Image Wrap End -->
+
+        <!-- Heading Wrap Start -->
+        <tr>
+            <td>
+                <table class="HeadingWrap" width='100%' border="0" cellpadding="0" cellspacing="0" align="center">
+                    <tr>
+                        <td width='100%'>
+                
+                            <a href="https://www.cloudways.com/blog/install-magento-on-digitalocean/?utm_source=newsletter&utm_medium=email&utm_campaign=magento-april-21-newsletter">
+                                            <h1>Get Rid of Hosting Woes by Hosting Typo3 on DigitalOcean Through Cloudways</h1>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table class="headingStripes" width='100%' border="0" cellpadding="0" cellspacing="0" align="center">
+                    <tr>
+                        <td width='100%'>
+                            <img src="https://cloudways-static-content.s3.amazonaws.com/Images/Others/Assets/glb_lines_cw2020.png" alt="">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- Heading Wrap End -->
+
+
+        <!-- Posts Wrap Start -->
+
+        <tr>
+            <td>
+                <table class="PostsWrap" width='100%' border="0" cellpadding="0" cellspacing="0" align="center">
+                    <tr>
+                        <td>
+                            <table class="PostsBox" width='100%' border="0" cellpadding="0" cellspacing="0"
+                                align="center">
+                                <tr>
+                                    <td width='50%' border="0" cellpadding="0" cellspacing="0">
+                                        <a href="https://imageengine.io/blog/core-web-vitals-score-updates-impact-google-seo?utm_source=newsletter&utm_medium=email&utm_campaign=magento-april-21-newsletter">
+                                            <img src="https://cloudways-static-content.s3.amazonaws.com/Images/Newsletter/Magento/April-2021/googlecorevital.png"
+                                                alt="Cloudways-ImageEngine">
+                                        </a>
+                                    </td>
+                                    <td class="PostsBoxContent" width='50%' border="0" cellpadding="0" cellspacing="0">
+                                        <span class="postCatg">Typo 3</span>
+                                        <a href="https://imageengine.io/blog/core-web-vitals-score-updates-impact-google-seo?utm_source=newsletter&utm_medium=email&utm_campaign=magento-april-21-newsletter">
+                                            <h3>How to Prepare for Google’s Recent Update</h3>
+                                            <p>From Core Web Vitals to SEO, Google is an essential factor in ecommerce success. Learn how to prepare your Magento site for May 2021’s updates.</p>
+                                            <span class="postLink">Read More</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table class="PostsBox" width='100%' border="0" cellpadding="0" cellspacing="0"
+                                align="center">
+                                <tr>
+                                    <td class="PostsBoxContent PostRight" width='50%' border="0" cellpadding="0"
+                                        cellspacing="0">
+                                        <span class="postCatg">Typo 3</span>
+                                        <a href="https://www.cloudways.com/blog/how-to-install-magento-on-amazon-aws-cloud/?utm_source=newsletter&utm_medium=email&utm_campaign=magento-mar-21-newsletter">
+                                            <h3>Learn How to Install Magento on AWS in a Few Clicks</h3>
+                                            <p>Hosting your Magento store on AWS allows you to scale your server whenever you need. You do not have to worry about a sudden influx of traffic during the upcoming holiday season.</p>
+                                            <span class="postLink">Read More</span>
+                                        </a>
+                                    </td>
+                                    <td align="right" width='50%' border="0" cellpadding="0" cellspacing="0">
+                                        <a href="https://www.cloudways.com/blog/how-to-install-magento-on-amazon-aws-cloud/?utm_source=newsletter&utm_medium=email&utm_campaign=magento-mar-21-newsletter">
+                                            <img src="https://cloudways-static-content.s3.amazonaws.com/Images/Newsletter/Magento/March-2021/4.png"
+                                                alt="Integrate-Paypal-1-1">
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table class="PostsBox" width='100%' border="0" cellpadding="0" cellspacing="0"
+                                align="center">
+                                <tr>
+                                    <td width='50%' border="0" cellpadding="0" cellspacing="0">
+                                        <a href="https://www.cloudways.com/blog/magento-on-google-cloud/?utm_source=newsletter&utm_medium=email&utm_campaign=magento-mar-21-newsletter">
+                                            <img src="https://cloudways-static-content.s3.amazonaws.com/Images/Newsletter/Magento/March-2021/6.png"
+                                                alt="Integrate-Paypal-1-2">
+                                        </a>
+                                    </td>
+                                    <td class="PostsBoxContent" width='50%' border="0" cellpadding="0" cellspacing="0">
+                                        <span class="postCatg">Typo 3</span>
+                                        <a href="https://www.cloudways.com/blog/magento-on-google-cloud/?utm_source=newsletter&utm_medium=email&utm_campaign=magento-mar-21-newsletter">
+                                            <h3>Ultimate Guide to Magento Google Cloud Installation</h3>
+                                            <p>Leverage world-class infrastructure and a robust solution to build, manage, and scale your business in today's competitive multi-cloud environment. Here’s a simplified guide to the topic.</p>
+                                            <span class="postLink">Read More</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table class="PostsBox noBorder" width='100%' border="0" cellpadding="0" cellspacing="0"
+                                align="center">
+                                <tr>
+                                    <td class="PostsBoxContent PostRight" width='50%' border="0" cellpadding="0"
+                                        cellspacing="0">
+                                        <span class="postCatg">Typo 3</span>
+                                        <a href="https://www.cloudways.com/blog/magento-on-vultr-cloud/?utm_source=newsletter&utm_medium=email&utm_campaign=magento-april-21-newsletter">
+                                            <h3>How To Install Magento On Vultr Via Cloudways</h3>
+                                            <p>Vultr is one of the fastest-growing cloud hosting infrastructure providers mainly because of its low latency server provision. Let's have a look at how easy it’s to host a Magento on Vultr.</p>
+                                            <span class="postLink">Read More</span>
+                                        </a>
+                                    </td>
+                                    <td align="right" width='50%' border="0" cellpadding="0" cellspacing="0">
+                                        <a href="https://www.cloudways.com/blog/magento-on-vultr-cloud/?utm_source=newsletter&utm_medium=email&utm_campaign=magento-april-21-newsletter">
+                                            <img src="https://cloudways-static-content.s3.amazonaws.com/Images/Newsletter/Magento/April-2021/magentovultr.jpg"
+                                                alt="Integrate-Paypal-1-3">
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="MostPopularHading">
+                            <h2>Most Popular</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table class="MostPopularPostWrap" width='100%' border="0" cellpadding="0" cellspacing="0"
+                                align="center">
+                                <tr>
+                                    <td class="MostPopularPost MostPopularPostLeft">
+                                        <span class="postCatg">Agency</span>
+                                        <a href="https://www.cloudways.com/blog/resell-hosting/?utm_source=newsletter&utm_medium=email&utm_campaign=magento-april-21-newsletter">Generate Recurring Revenue for Your Agency by Reselling Hosting Solutions</a>
+                                    </td>
+                                    <td class="MostPopularPost MostPopularPostRight">
+                                        <span class="postCatg">Ecommerce</span>
+                                        <a href="https://www.cloudways.com/blog/best-ecommerce-website-builders/?utm_source=newsletter&utm_medium=email&utm_campaign=magento-april-21-newsletter">Top eCommerce Website Builders for Small Business Websites</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="height:35px;"></td>
+                                </tr>
+                                <tr>
+                                    <td class="MostPopularPost MostPopularPostLeft">
+                                        <span class="postCatg">Typo 3</span>
+                                        <a href="https://www.cloudways.com/blog/magento-starter-pack-discount/?utm_source=newsletter&utm_medium=email&utm_campaign=magento-april-21-newsletter">Mega 50% Off on Magento Starter Pack - Build Your Magento Store Today!</a>
+                                    </td>
+                                    <td class="MostPopularPost MostPopularPostRight">
+                                        <span class="postCatg">WooCommerce</span>
+                                        <a href="https://www.cloudways.com/blog/best-woocommerce-payment-gateways/?utm_source=newsletter&utm_medium=email&utm_campaign=magento-april-21-newsletter">Globally Functioning Must-Have Payment Gateways for your eCommerce Store</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- Posts Wrap End -->
+
+
+        <!-- CTA Wrap Begin -->
+        <tr>
+            <td>
+                <table class="ctaWrap" width='100%' border="0" cellpadding="0" cellspacing="0" align="center">
+                    <tr>
+                        <td align="center" width='100%'>
+                            <a class="cta" href="http://cloudways.com/">Reserve Your Slot Now</a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- CTA Wrap End -->

@@ -1,0 +1,56 @@
+#TypoScript code example for my Projects Page on my Portfolio Website
+
+lib.parallax = IMAGE
+lib.parallax {
+  file {
+    import.data = levelmedia:-1, slide
+    treatIdAsReference = 1
+    import.listNum = 0
+  }
+  params = class=""
+  wrap = <div class="parallax">|</div>
+}
+
+lib.projects = FILES
+lib.projects {
+    references {
+        table = pages
+        uid.data = tsfe:id
+        fieldName = media
+    }
+
+    begin = 1
+    maxItems = 20
+
+    renderObj = COA
+    renderObj {
+      stdWrap.required=1
+      stdWrap.wrap = <div class="projects center-align">|</div>
+        5 = TEXT
+        5 {
+            data = file:current:title
+            wrap = <h5 class="project-title">|</h5>
+        }
+        10 = IMAGE
+        10 {
+            file.import.dataWrap = {file:current:storage}:{file:current:identifier}
+            params = class="materialboxed responsive-img hoverable"
+        }
+        15 = TEXT
+        15 {
+           data = file:current:description
+           wrap = <div class="hide-on-small-only"><p class="project-content">|</p></div>
+          }
+
+        25 = TEXT
+        25 {
+            typolink {
+              parameter.data = file:current:link
+              extTarget = _blank
+              ATagParams =
+              wrap = <div class="project-content">|</div>
+             }
+           }
+
+      }
+}
